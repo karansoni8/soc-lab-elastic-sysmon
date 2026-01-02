@@ -12,6 +12,15 @@ I built a small SOC lab that collects endpoint telemetry from Windows using Sysm
 ## Architecture
 See: [ARCHITECTURE.md](ARCHITECTURE.md)
 
+### Diagram (Mermaid)
+```mermaid
+flowchart LR
+  W[Windows 10\nSysmon + Elastic Agent\n10.10.10.3] -->|Enroll / Policy| F[Fleet Server\n10.10.10.2:8220]
+  F -->|Ingest| E[Elasticsearch\n10.10.10.2:9200]
+  K[Kibana Security\n10.10.10.2:5601] <-->|Search / Visualize| E
+  K --> A[Detections + Alerts]
+```
+
 ## Detections
 - Encoded PowerShell execution: [detections/01-encoded-powershell.md](detections/01-encoded-powershell.md)
 - Local admin group change: [detections/02-local-admin-change.md](detections/02-local-admin-change.md)
