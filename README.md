@@ -1,5 +1,13 @@
 # SOC Detection Lab (Elastic SIEM + Fleet + Sysmon)
 
+<!-- Add this block right under your H1 title -->
+
+![Elastic](https://img.shields.io/badge/Elastic_Stack-005571?style=flat-square&logo=elastic&logoColor=white)
+![Kibana](https://img.shields.io/badge/Kibana-005571?style=flat-square&logo=kibana&logoColor=white)
+![Sysmon](https://img.shields.io/badge/Sysmon-0078D4?style=flat-square&logo=windows&logoColor=white)
+![KQL](https://img.shields.io/badge/KQL-Detections-blue?style=flat-square)
+![MITRE](https://img.shields.io/badge/MITRE_ATT%26CK-Mapped-red?style=flat-square)
+
 I built a small SOC lab that collects endpoint telemetry from Windows using Sysmon, ships it through Elastic Agent + Fleet Server, and generates security alerts using custom detections. I validated detections end-to-end and documented investigation workflow (alert → triage → incident report).
 
 ## What this demonstrates
